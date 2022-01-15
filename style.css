@@ -1,3 +1,16 @@
 .background {
   background: linear-gradient(69.66deg, #00c1fe 19.39%, #faffc1 96.69%);
 }
+
+.bg-sidebar {
+  background-color: #faffc1;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+}
+
+.bg-active {
+  background-color: #00c1fe;
+}
