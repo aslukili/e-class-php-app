@@ -30,3 +30,8 @@
 .bg-users {
   background: linear-gradient(110.42deg, #00c1fe 18.27%, #faffc1 91.84%);
 }
+
+.table-separate {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
