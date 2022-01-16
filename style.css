@@ -14,3 +14,19 @@
 .bg-active {
   background-color: #00c1fe;
 }
+
+.bg-student {
+  background-color: #f0f9ff;
+}
+
+.bg-course {
+  background-color: #fef6fb;
+}
+
+.bg-payments {
+  background-color: #fefbec;
+}
+
+.bg-users {
+  background: linear-gradient(110.42deg, #00c1fe 18.27%, #faffc1 91.84%);
+}
