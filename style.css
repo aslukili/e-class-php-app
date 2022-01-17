@@ -35,3 +35,12 @@
   border-collapse: separate;
   border-spacing: 0 10px;
 }
+
+.btn-bg-less {
+  background-color: transparent;
+  border: none;
+}
+/* 
+tr:nth-of-type(odd) {
+  background-color: rgb(255, 255, 255) !;
+} */
