@@ -15,6 +15,7 @@
   </head>
   <body>
     <main>
+      
       <!-- page container -->
       <div class="container-fluid">
         <div class="row flex-nowrap">
@@ -23,32 +24,7 @@
           <!-- main page  -->
           <div class="bg-light container-fluid m-0 col-9">
             <!-- header -->
-            <div class="bg-white row align-items-center py-2">
-              <div class="col-1">
-                <!-- hide icone here -->
-                <i class="bi bi-arrow-left-circle"></i>
-              </div>
-              <!--this to keep search and bell at the right side-->
-              <div class="col-6"></div>
-              <div class="col-4">
-                <!-- serch input here -->
-                <div class="input-group">
-                  <input
-                    type="search"
-                    id="form1"
-                    class="form-control"
-                    placeholder="search"
-                  />
-                  <button type="button" class="btn bg-light">
-                    <i class="bi bi-search"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="col-1">
-                <!-- notification bell here -->
-                <i class="bi bi-bell"></i>
-              </div>
-            </div>
+            <?php include('./templates/header.html');?>
             <!-- main content -->
             <!-- content head -->
             <div class="row align-items-center text-end py-1">

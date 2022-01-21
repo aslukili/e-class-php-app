@@ -23,32 +23,7 @@
           <!-- main page  -->
           <div class="container-fluid m-0 col-9">
             <!-- header -->
-            <div class="row align-items-center mt-2">
-              <div class="col-1">
-                <!-- hide icone here -->
-                <i class="bi bi-arrow-left-circle"></i>
-              </div>
-              <!--this to keep search and bell at the right side-->
-              <div class="col-6"></div>
-              <div class="col-4">
-                <!-- serch input here -->
-                <div class="input-group">
-                  <input
-                    type="search"
-                    id="form1"
-                    class="form-control"
-                    placeholder="search"
-                  />
-                  <button type="button" class="btn">
-                    <i class="bi bi-search"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="col-1">
-                <!-- notification bell here -->
-                <i class="bi bi-bell"></i>
-              </div>
-            </div>
+            <?php include('./templates/header.html');?>
             <!-- cards of info -->
             <div class="row mt-4">
               <!-- students card -->
