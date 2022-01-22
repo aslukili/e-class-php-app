@@ -55,21 +55,23 @@
                     <th scope="col"></th>
                   </tr>
                 </thead>
+                <tbody>
                 <?php
                 $payments = array (
-                array("name"=>"karthi1", "payment1"=>"first1", "Bill"=>"00012223A", "amount1"=>"DH 100,00A", "balance1"=>"DH 500,00A", "date1"=>"05-jan,2022A"),
-                array("name"=>"karthi2", "payment2"=>"first2", "Bill"=>"00012223B", "amount2"=>"DH 100,00B", "balance2"=>"DH 500,00B", "date2"=>"05-jan,2022B"),
-                array("name"=>"karthi3", "payment3"=>"first3", "Bill"=>"00012223C", "amount3"=>"DH 100,00C", "balance3"=>"DH 500,00C", "date3"=>"05-jan,2022C"),
-                array("name"=>"karthi4", "payment4"=>"first4", "Bill"=>"00012223D", "amount4"=>"DH 100,00D", "balance4"=>"DH 500,00D", "date4"=>"05-jan,2022D")
+                array("name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"),
+                array("name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"),
+                array("name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"),
+                array("name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022")
                 );
                   foreach ($payments as $payment) {
                     echo '<tr>';
-                    foreach ($payment as $value1) {
-                        echo '<td>' . $value1 . '</td>';    
+                    foreach ($payment as $value) {
+                      echo '<td class="align-middle p-3">' . $value . '</td>';    
                     }
                     echo '</tr>';
                   } 
                 ?>
+                </tbody>
               </table>
             </div>
           </div>
