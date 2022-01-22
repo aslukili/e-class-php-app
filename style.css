@@ -40,6 +40,10 @@
   background-color: transparent;
   border: none;
 }
+
+.list-style-none {
+  list-style-type: none;
+}
 /* 
 tr:nth-of-type(odd) {
   background-color: rgb(255, 255, 255) !;

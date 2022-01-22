@@ -22,18 +22,18 @@
           <!-- sidebar -->
           <?php include('./templates/sidebar.html');?>
           <!-- main page  -->
-          <div class="bg-light container-fluid m-0 col-9">
+          <div class="bg-light container-fluid m-0 col-10 col-md-9">
             <!-- header -->
             <?php include('./templates/header.html');?>
             <!-- main content -->
             <!-- content head -->
             <div class="row align-items-center text-end py-1">
               <!-- title -->
-              <div class="col-3 text-start">
+              <div class="col-5 col-md-3 text-start">
                 <h2>Students list</h2>
               </div>
 
-              <div class="col-5">
+              <div class="d-none d-sm-block col-sm-2 col-md-5">
                 <!-- divider -->
               </div>
               <!-- toggle icon -->
@@ -59,7 +59,7 @@
                 </svg>
               </div>
               <!-- button -->
-              <div class="col-3">
+              <div class="col-5 col-sm-4 col-md-3">
                 <button class="btn btn-info">ADD NEW STUDENT</button>
               </div>
             </div>
