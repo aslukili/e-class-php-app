@@ -89,7 +89,7 @@
                 array("pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022")
                 );
                   foreach ($students as $student) {
-                    echo '<tr>';
+                    echo '<tr class="bg-white">';
                     foreach ($student as $value) {
                       echo '<td class="align-middle p-3">' . $value . '</td>';    
                     }
