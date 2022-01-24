@@ -80,14 +80,14 @@
                 </thead>
                 <tbody>
                 <?php
-                $students = array (
-                array("pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"),
-                array("pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"),
-                array("pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"),
-                array("pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"),
-                array("pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"),
-                array("pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022")
-                );
+                $students = [
+                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
+                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
+                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
+                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
+                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
+                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"]
+                ];
                   foreach ($students as $student) {
                     echo '<tr class="bg-white">';
                     foreach ($student as $value) {

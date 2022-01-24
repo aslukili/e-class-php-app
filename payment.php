@@ -57,19 +57,19 @@
                 </thead>
                 <tbody>
                 <?php
-                $payments = array (
-                array("name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"),
-                array("name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"),
-                array("name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"),
-                array("name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022")
-                );
-                  foreach ($payments as $payment) {
-                    echo '<tr>';
-                    foreach ($payment as $value) {
-                      echo '<td class="align-middle p-3">' . $value . '</td>';    
-                    }
-                    echo '</tr>';
-                  } 
+                $payments = [
+                ["name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"],
+                ["name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"],
+                ["name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"],
+                ["name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"]
+                ];
+                foreach ($payments as $payment) {
+                  echo '<tr>';
+                  foreach ($payment as $key => $value) {
+                    echo '<td class="align-middle p-3">' . $value . '</td>';    
+                  }
+                  echo '</tr>';
+                } 
                 ?>
                 </tbody>
               </table>
