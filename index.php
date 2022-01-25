@@ -21,7 +21,7 @@
           <!-- sidebar -->
           <?php include('./templates/sidebar.html')?>
           <!-- main page  -->
-          <div class="container-fluid m-0 col-md-9 col-10">
+          <div class="container-fluid m-0 col-md-9 col-10 col-xxl-10">
             <!-- header -->
             <?php include('./templates/header.html');?>
             <!-- cards of info -->

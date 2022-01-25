@@ -44,6 +44,10 @@
 .list-style-none {
   list-style-type: none;
 }
+
+.hover-list:hover {
+  background-color: #00c1fe;
+}
 /* 
 tr:nth-of-type(odd) {
   background-color: rgb(255, 255, 255) !;
