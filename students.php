@@ -11,7 +11,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Students</title>
+      <meta name = "keywords" content = "e-class, e-learning, students" />
+      <meta name = "description" content = "e-class is the next generation of schools." />
+
+      <title>Students</title>
   </head>
   <body>
     <main>
@@ -79,23 +82,21 @@
                   </tr>
                 </thead>
                 <tbody>
-                <?php
-                $students = [
-                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
-                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
-                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
-                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
-                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"],
-                ["pic"=>"img", "usr"=>"username", "email"=>"user@email.com", "phone"=>"+212012345678", "enrollNumber"=>"12345678901112", "date"=>"05-jan,2022"]
-                ];
-                  foreach ($students as $student) {
-                    echo '<tr class="bg-white">';
-                    foreach ($student as $value) {
-                      echo '<td class="align-middle p-3">' . $value . '</td>';    
-                    }
-                    echo '</tr>';
-                  } 
-                ?>
+                    <?php
+                    $students = json_decode(file_get_contents('./studentdata.json'), true);?>
+
+                    <?php foreach ($students as $student): ?>
+                    <tr class="bg-white">
+                        <td><img src="./asset/img/photo.png" alt="user pic"></td>
+                        <?php foreach ($student as $value) {
+                            echo '<td class="align-middle p-3">' . $value . '</td>';
+                        } ?>
+                        <td class="align-middle p-3">
+                            <button class="btn btn-bg-less"><i class="bi bi-pencil " style="color: #0c63e4"></i></button>
+                            <button class="btn btn-bg-less"><i class="bi bi-trash " style="color: #0c63e4"></i></button>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
                 </tbody>
               </table>
             </div>
@@ -105,3 +106,4 @@
     </main>
   </body>
 </html>
+

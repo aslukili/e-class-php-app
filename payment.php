@@ -11,7 +11,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payments</title>
+      <meta name = "keywords" content = "e-class, e-learning, students" />
+      <meta name = "description" content = "e-class is the next generation of schools." />
+
+      <title>Payments</title>
   </head>
   <body>
     <main>
