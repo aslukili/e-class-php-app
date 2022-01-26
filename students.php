@@ -92,8 +92,8 @@
                             echo '<td class="align-middle p-3">' . $value . '</td>';
                         } ?>
                         <td class="align-middle p-3">
-                            <button class="btn btn-bg-less"><i class="bi bi-pencil " style="color: #0c63e4"></i></button>
-                            <button class="btn btn-bg-less"><i class="bi bi-trash " style="color: #0c63e4"></i></button>
+                            <button class="btn btn-bg-less" aria-label="edit"><i class="bi bi-pencil " style="color: #0c63e4"></i></button>
+                            <button class="btn btn-bg-less" aria-label="delete"><i class="bi bi-trash " style="color: #0c63e4"></i></button>
                         </td>
                     </tr>
                     <?php endforeach; ?>
