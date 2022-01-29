@@ -42,7 +42,7 @@
               <!-- courses card -->
               <div class="col-xl-3 col-md-6 mb-3">
                 <div class="col-12 rounded-3 p-3 pb-1 bg-course">
-                  <img src="./asset/svg/save.svg" alt="course icone">
+                  <img src="./asset/svg/save.svg" alt="course icon">
 
                   <p class="text-secondary">Course</p>
                   <div class="text-end">

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
     <!-- bootstrap icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -71,6 +71,7 @@
                   foreach ($payment as $key => $value) {
                     echo '<td class="align-middle p-3">' . $value . '</td>';    
                   }
+                    echo '<td class="align-middle p-3"> <i class="bi bi-eye text-info"></i></td>';
                   echo '</tr>';
                 } 
                 ?>

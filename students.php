@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
     <!-- bootstrap icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -92,8 +92,8 @@
                             echo '<td class="align-middle p-3">' . $value . '</td>';
                         } ?>
                         <td class="align-middle p-3">
-                            <button class="btn btn-bg-less" aria-label="edit"><i class="bi bi-pencil " style="color: #0c63e4"></i></button>
-                            <button class="btn btn-bg-less" aria-label="delete"><i class="bi bi-trash " style="color: #0c63e4"></i></button>
+                            <button class="btn btn-bg-less" aria-label="edit"><i class="bi bi-pencil" ></i></button>
+                            <button class="btn btn-bg-less" aria-label="delete"><i class="bi bi-trash " ></i></button>
                         </td>
                     </tr>
                     <?php endforeach; ?>
