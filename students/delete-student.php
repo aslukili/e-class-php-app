@@ -15,8 +15,8 @@ file_put_contents('./students.json', $data);
 
 
 echo "
-            <script>
-            window.location.href = '../students.php';
-            </script>
-        ";
+        <script>
+        window.location.href = '../students.php';
+        </script>
+    ";
 ?>

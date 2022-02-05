@@ -9,11 +9,11 @@
 <body>
 <h1>Add new student</h1>
 <form action="" method="POST">
-    <input type="text" placeholder="Name" name="name">
-    <input type="email" placeholder="Email" name="email">
-    <input type="text" placeholder="phone" name="phone">
-    <input type="text" placeholder="enroll number" name="number">
-    <input type="date" placeholder="join date" name="join_date">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="email" placeholder="Email" name="email" required>
+    <input type="text" placeholder="phone" name="phone" required>
+    <input type="text" placeholder="enroll number" name="number" required>
+    <input type="date" placeholder="join date" name="join_date" required>
     <input type="submit" value="save">
 </form>
 </body>
@@ -35,9 +35,9 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phone'])&& 
     $data = json_encode($students, JSON_PRETTY_PRINT);
     file_put_contents('./students.json', $data);
     echo "
-            <script>
-            window.location.href = '../students.php';
-            </script>
-        ";
+        <script>
+        window.location.href = '../students.php';
+        </script>
+    ";
 }
 ?>

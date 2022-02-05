@@ -1,3 +1,5 @@
+
+<?php include_once './includes/dbh.inc.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,7 +93,6 @@
                                 <?php foreach ($student as $key => $value) {
                                     if ($key != 'id'){
                                         echo '<td class="align-middle p-3">' . $value . '</td>';
-
                                     }
                                 } ?>
                                 <td class="align-middle p-3">
@@ -104,6 +105,7 @@
                         <?php endforeach; ?>
                         </tbody>
                     </table>
+
                 </div>
             </div>
         </div>

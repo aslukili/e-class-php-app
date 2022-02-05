@@ -70,9 +70,9 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phone']) &&
     $data = json_encode($students, JSON_PRETTY_PRINT);
     file_put_contents('./students.json', $data);
     echo "
-            <script>
-            window.location.href = '../students.php';
-            </script>
-        ";
+        <script>
+        window.location.href = '../students.php';
+        </script>
+    ";
 }
 ?>
