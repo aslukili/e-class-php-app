@@ -1,5 +1,5 @@
 
-<?php include_once './includes/dbh.inc.php'; ?>
+<?php include './includes/dbh.inc.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,25 +84,41 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php
-                        $students = json_decode(file_get_contents('./students/students.json'), true); ?>
 
-                        <?php foreach ($students as $student): ?>
-                            <tr class="bg-white">
-                                <td><img src="./asset/img/photo.png" alt="user pic"></td>
-                                <?php foreach ($student as $key => $value) {
-                                    if ($key != 'id'){
-                                        echo '<td class="align-middle p-3">' . $value . '</td>';
-                                    }
-                                } ?>
-                                <td class="align-middle p-3">
-                                    <a  href="./students/update-student.php?id=<?php echo $student['id']?>" class="btn btn-bg-less" aria-label="edit"><i class="bi bi-pencil text-info"></i>
-                                    </a>
-                                    <a href="./students/delete-student.php?id=<?php echo $student['id']?>" class="btn btn-bg-less" aria-label="delete"><i class="bi bi-trash text-info"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
+                        <?php
+                        //reading data from mysql
+                        $sql = "SELECT * FROM students";
+                        $result = mysqli_query($conn, $sql);
+                        $result_check = mysqli_num_rows($result);
+
+                        if ($result_check > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo $row['name'];
+                            }
+                        }
+                        ?>
+
+
+<!--                        --><?php
+//                        //old json data
+//                        $students = json_decode(file_get_contents('./students/students.json'), true); ?>
+<!---->
+<!--                        --><?php //foreach ($students as $student): ?>
+<!--                            <tr class="bg-white">-->
+<!--                                <td><img src="./asset/img/photo.png" alt="user pic"></td>-->
+<!--                                --><?php //foreach ($student as $key => $value) {
+//                                    if ($key != 'id'){
+//                                        echo '<td class="align-middle p-3">' . $value . '</td>';
+//                                    }
+//                                } ?>
+<!--                                <td class="align-middle p-3">-->
+<!--                                    <a  href="./students/update-student.php?id=--><?php //echo $student['id']?><!--" class="btn btn-bg-less" aria-label="edit"><i class="bi bi-pencil text-info"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="./students/delete-student.php?id=--><?php //echo $student['id']?><!--" class="btn btn-bg-less" aria-label="delete"><i class="bi bi-trash text-info"></i>-->
+<!--                                    </a>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                        --><?php //endforeach; ?>
                         </tbody>
                     </table>
 
