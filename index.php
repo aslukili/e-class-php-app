@@ -1,3 +1,25 @@
+<?php include './includes/dbh.inc.php';
+
+$students_sql = "SELECT * FROM students";
+$courses_sql = "SELECT * FROM courses";
+//$payments_sql = "SELECT SUM(amount_paid) FROM payment_details";
+
+
+$students = mysqli_query($conn, $students_sql);
+if ($students){
+    $students_count = mysqli_num_rows( $students);
+}
+if ($courses = mysqli_query($conn, $courses_sql)){
+    $courses_count = mysqli_num_rows( $courses);
+}
+
+$result = mysqli_query($conn, 'SELECT SUM(amount_paid) AS value_sum FROM payment_details');
+$row = mysqli_fetch_assoc($result);
+$sum = $row['value_sum'];
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,7 +57,7 @@
                   <img src="./asset/svg/sudent-cap.svg" alt="student icon">
                   <p class="text-secondary">Students</p>
                   <div class="text-end">
-                    <h3 class="d-inline">243</h3>
+                    <h3 class="d-inline"><?php echo $students_count; ?></h3>
                   </div>
                 </div>
               </div>
@@ -46,7 +68,7 @@
 
                   <p class="text-secondary">Course</p>
                   <div class="text-end">
-                    <h3 class="d-inline">13</h3>
+                    <h3 class="d-inline"><?php echo $courses_count; ?></h3>
                   </div>
                 </div>
               </div>
@@ -58,7 +80,7 @@
                   <p class="text-secondary">Payments</p>
                   <div class="text-end">
                     <span>DHS</span>
-                    <h3 class="d-inline">556,000</h3>
+                    <h3 class="d-inline"><?php echo $sum; ?></h3>
                   </div>
                 </div>
               </div>

@@ -53,11 +53,8 @@ if (isset($_POST['save'])){
     $enroll_number = $_POST['enroll_number'];
     $join_date = $_POST['join_date'];
 
-
     $sql_insert = "INSERT INTO students(name, email, phone, enroll_number, join_date) VALUES ('$name', '$email', '$phone', $enroll_number, '$join_date')";
-
     $result = mysqli_query($conn, $sql_insert);
-
     if($result){
         echo "Student record is successfully inserted!";
     }
@@ -65,7 +62,7 @@ if (isset($_POST['save'])){
         echo "something went wrong!";
     }
 
-    
+
     echo "
         <script>
         window.location.href = '../students.php';
