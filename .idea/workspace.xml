@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b964e865-5c06-4d10-a208-02ed0503d904" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/students/add-student.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/delete-student.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/students.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/update-student.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/students.php" beforeDir="false" afterPath="$PROJECT_DIR$/students.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -59,7 +53,8 @@
       <workItem from="1643469422109" duration="42000" />
       <workItem from="1643469474883" duration="132000" />
       <workItem from="1643469620242" duration="4267000" />
-      <workItem from="1643541191204" duration="5417000" />
+      <workItem from="1643541191204" duration="6365000" />
+      <workItem from="1643556996145" duration="752000" />
     </task>
     <servers />
   </component>

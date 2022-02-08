@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./public/style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,11 +22,11 @@
       <div class="container-fluid">
         <div class="row flex-nowrap">
           <!-- sidebar -->
-          <?php include('./templates/sidebar.html');?>
+          <?php include('./includes/templates/sidebar.html');?>
           <!-- main page  -->
           <div class="bg-light container-fluid m-0 col-10 col-md-9 col-xxl-10">
             <!-- header -->
-            <?php include('./templates/header.html');?>
+            <?php include('./includes/templates/header.html');?>
             <!-- main content -->
             <!-- content head -->
             <div class="row align-items-center text-end py-1">
@@ -60,20 +60,41 @@
                 </thead>
                 <tbody>
                 <?php
-                $payments = [
-                ["name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"],
-                ["name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"],
-                ["name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"],
-                ["name"=>"someone", "schedual"=>"first", "Bill"=>"00012223", "amount"=>"DH 100,00", "balance"=>"DH 500,00", "date"=>"05-jan,2022"]
-                ];
-                foreach ($payments as $payment) {
-                  echo '<tr>';
-                  foreach ($payment as $key => $value) {
-                    echo '<td class="align-middle p-3">' . $value . '</td>';    
-                  }
-                    echo '<td class="align-middle p-3"> <i class="bi bi-eye text-info"></i></td>';
-                  echo '</tr>';
-                } 
+                include './includes/dbh.inc.php';
+
+                //reading data from mysql
+                $sql = "SELECT * FROM payment_details";
+                $result = mysqli_query($conn, $sql);
+
+                if ($result) {
+                    while ($payment = mysqli_fetch_assoc($result)){
+                        $id = $payment['id'];
+                        $name = $payment['name'];
+                        $payment_schedual = $payment['payment_schedual'];
+                        $bill_number = $payment['bill_number'];
+                        $amount_paid = $payment['amount_paid'];
+                        $balance_amount = $payment['balance_amount'];
+                        $date = $payment['date'];
+
+                        $row = <<<ROW
+                            <tr>
+                                <td class="align-middle py-3">$name</td>
+                                <td class="align-middle py-3">$payment_schedual</td>
+                                <td class="align-middle py-3">$bill_number</td>
+                                <td class="align-middle py-3">$amount_paid</td>
+                                <td class="align-middle py-3">$balance_amount</td>
+                                <td class="align-middle py-3">$date</td>
+                                <td class="align-middle p-3">
+                                    <a  href="#" class="btn btn-bg-less" aria-label="edit"><i class="bi bi-pencil text-info"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-bg-less" aria-label="delete"><i class="bi bi-trash text-info"></i>
+                                    </a>
+                                </td>
+                            </tr>
+ROW;
+                        echo $row;
+                    }
+                }
                 ?>
                 </tbody>
               </table>
