@@ -1,9 +1,3 @@
-
-<?php
-//crud with mysql
-include '../includes/dbh.inc.php';  //connection to the database;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +9,7 @@ include '../includes/dbh.inc.php';  //connection to the database;
 
 </head>
 <body>
-<h1>Add new course</h1>
+<h1>update course</h1>
 <form class="container" style="max-width: 500px" method="POST">
     <div class="input-group mb-3">
         <label class="form-label">title</label>
@@ -39,29 +33,31 @@ include '../includes/dbh.inc.php';  //connection to the database;
 </form>
 </body>
 </html>
-
 <?php
+include '../dbh.inc.php';  //connection to the database;
+$id = $_GET['id'];
+
 //form submitting
-if (isset($_POST['save'])){
+if (isset($_POST['save'])) {
     $title = $_POST['title'];
     $instructor = $_POST['instructor'];
     $length = $_POST['length'];
     $release_date = $_POST['release_date'];
 
-    $sql_insert = "INSERT INTO courses(title, instructor, length, release_date) VALUES ('$title', '$instructor', '$length', '$release_date')";
-    $result = mysqli_query($conn, $sql_insert);
-    if($result){
-        echo "Student record is successfully inserted!";
-    }
-    else {
+    $sql = "UPDATE courses SET title = '$title', instructor = '$instructor', length = '$length', release_date = '$release_date' WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+
+
+    if ($result) {
+        echo "course record is successfully updated!";
+    } else {
         echo "something went wrong!";
     }
 
 
     echo "
         <script>
-        window.location.href = '../courses.php';
+        window.location.href = '../../students.php';
         </script>
     ";
 }
-?>

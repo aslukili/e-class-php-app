@@ -9,7 +9,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./public/style.css"/>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -25,11 +25,11 @@
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <!-- sidebar -->
-            <?php include('./templates/sidebar.html'); ?>
+            <?php include('./includes/templates/sidebar.html'); ?>
             <!-- main page  -->
             <div class="bg-light container-fluid m-0 col-10 col-md-9 col-xxl-10">
                 <!-- header -->
-                <?php include('./templates/header.html'); ?>
+                <?php include('./includes/templates/header.html'); ?>
                 <!-- main content -->
                 <!-- content head -->
                 <div class="row align-items-center text-end py-1">
@@ -65,7 +65,7 @@
                     </div>
                     <!-- button -->
                     <div class="col-5 col-sm-4 col-md-3">
-                        <a href="./students/add-student.php" class="btn btn-info">ADD NEW STUDENT</a>
+                        <a href="./includes/students/add-student.php" class="btn btn-info">ADD NEW STUDENT</a>
                     </div>
                 </div>
                 <hr class="m-0"/>
@@ -99,7 +99,7 @@
                                 $join_date = $student['join_date'];
 
                                 $row = <<<ROW
-                                    <tr>
+                                    <tr class="bg-white">
                                         <td><img src="./asset/img/photo.png" alt="user pic"></td>
                                         <td class="align-middle py-3">$name</td>
                                         <td class="align-middle py-3">$email</td>
@@ -107,9 +107,9 @@
                                         <td class="align-middle py-3">$number</td>
                                         <td class="align-middle py-3">$join_date</td>
                                         <td class="align-middle p-3">
-                                            <a  href="./students/update-student.php?id=$id" class="btn btn-bg-less" aria-label="edit"><i class="bi bi-pencil text-info"></i>
+                                            <a  href="./includes/students/update-student.php?id=$id" class="btn btn-bg-less" aria-label="edit"><i class="bi bi-pencil text-info"></i>
                                             </a>
-                                            <a href="./students/delete-student.php?deleteid=$id" class="btn btn-bg-less" aria-label="delete"><i class="bi bi-trash text-info"></i>
+                                            <a href="./includes/students/delete-student.php?deleteid=$id" class="btn btn-bg-less" aria-label="delete"><i class="bi bi-trash text-info"></i>
                                             </a>
                                         </td>
                                     </tr>

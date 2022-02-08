@@ -1,5 +1,5 @@
 <?php
-include '../includes/dbh.inc.php';
+include '../dbh.inc.php';  //connection to the database;
 if (isset($_GET['deleteid']))
     $delete_id = $_GET['deleteid'];
 $sql = "DELETE FROM courses WHERE id = $delete_id";
@@ -10,7 +10,7 @@ if (!$result) {
 }else{
     echo "
         <script>
-        window.location.href = '../courses.php';
+        window.location.href = '../../courses.php';
         </script>
     ";
 }
