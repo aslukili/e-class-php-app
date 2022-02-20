@@ -1,5 +1,6 @@
-
-<?php include './includes/dbh.inc.php'; ?>
+<?php
+session_start();
+include './includes/dbh.inc.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +26,7 @@
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <!-- sidebar -->
-            <?php include('./includes/templates/sidebar.html'); ?>
+            <?php include('./includes/templates/sidebar.php'); ?>
             <!-- main page  -->
             <div class="bg-light container-fluid m-0 col-10 col-md-9 col-xxl-10">
                 <!-- header -->

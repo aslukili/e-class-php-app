@@ -16,7 +16,7 @@ include '../dbh.inc.php';  //connection to the database;
 </head>
 <body>
 <h1>Add new student</h1>
-<form class="container" style="max-width: 500px" method="POST">
+    <form class="container" style="max-width: 500px" method="POST">
     <div class="input-group mb-3">
         <label class="form-label">name</label>
         <input class="form-control" type="text" placeholder="Name" name="name" required>

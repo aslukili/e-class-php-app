@@ -17,7 +17,7 @@
       />
 
       <div class="mt-2">
-        <span><b> admin name</b></span>
+        <span><b> <?php echo $_SESSION['first_name'] .' '. $_SESSION['last_name']?></b></span>
       </div>
       <span class="text-info">admin</span>
     </div>
@@ -25,7 +25,7 @@
     <div class="mx-auto my-5" style="max-width: 190px">
       <ul class="list-group text-start mx-md-2 list-style-none">
         <li class="text-center list-group-item bg-active rounded-3 p-1 py-2">
-          <a href="./index.php" class="btn btn-bg-less p-0 m-auto" aria-label="Home">
+          <a href="./dashboard.php" class="btn btn-bg-less p-0 m-auto" aria-label="Home">
             <i class="bi bi-house-door me-2"></i>
             <span class="d-none d-md-inline">Home</span>
           </a>
@@ -64,7 +64,7 @@
         </li>
         <!-- logout -->
         <li class="text-center mt-5 hover-list">
-          <a href="./login.html" class="btn btn-bg-less" aria-label="logout">
+          <a href="./includes/logout.php?logout" class="btn btn-bg-less" aria-label="logout">
             <span class="d-none d-md-inline">Logout</span>
             <i class="bi bi-box-arrow-right"></i>
           </a>
