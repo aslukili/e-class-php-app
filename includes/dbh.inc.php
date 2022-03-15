@@ -6,6 +6,10 @@ $db_name = "e_class_db";
 
 $conn = mysqli_connect($db_server_name, $db_username, $db_password, $db_name);
 
+if (!$conn){
+    die("not connected!" . mysqli_connect_error());
+}
+
 //checking connection to the database:
 //try {
 //    $conn;
@@ -14,9 +18,3 @@ $conn = mysqli_connect($db_server_name, $db_username, $db_password, $db_name);
 //catch (Exception $e){
 //    echo "connection failed!" . $e->getMessage();
 //}
-
-
-
-if (!$conn){
-    die("not connected!" . mysqli_connect_error());
-}

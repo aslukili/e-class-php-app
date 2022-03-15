@@ -12,9 +12,6 @@ else {
     } else {
 
 
-
-
-
 $students_sql = "SELECT * FROM students";
 $courses_sql = "SELECT * FROM courses";
 //$payments_sql = "SELECT SUM(amount_paid) FROM payment_details";
