@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['first_name'] = $user['first_name'];
             $_SESSION['last_name'] = $user['last_name'];
             $_SESSION['start'] = time();
-            $_SESSION['end'] = $_SESSION['start'] + (60*60);
+            $_SESSION['end'] = $_SESSION['start'] + (30); // for 24h (60*60)
 
             //set cookies here
             if(!empty($_POST["remember_me"])){
