@@ -1,55 +1,68 @@
 .background {
-  background: linear-gradient(69.66deg, #00c1fe 19.39%, #faffc1 96.69%);
+    background: linear-gradient(69.66deg, #00c1fe 19.39%, #faffc1 96.69%);
 }
 
 .bg-sidebar {
-  background-color: #faffc1;
+    background-color: #faffc1;
 }
 
 .list-group-item {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 
 .bg-active {
-  background-color: #00c1fe;
+    background-color: #00c1fe;
 }
 
 .bg-student {
-  background-color: #f0f9ff;
+    background-color: #f0f9ff;
 }
 
 .bg-course {
-  background-color: #fef6fb;
+    background-color: #fef6fb;
 }
 
 .bg-payments {
-  background-color: #fefbec;
+    background-color: #fefbec;
 }
 
 .bg-users {
-  background: linear-gradient(110.42deg, #00c1fe 18.27%, #faffc1 91.84%);
+    background: linear-gradient(110.42deg, #00c1fe 18.27%, #faffc1 91.84%);
 }
 
 .table-separate {
-  border-collapse: separate;
-  border-spacing: 0 10px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
 }
 
 .btn-bg-less {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 
 .list-style-none {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .hover-list:hover {
-  background-color: #00c1fe;
+    background-color: #00c1fe;
 }
 
-/* 
-tr:nth-of-type(odd) {
-  background-color: rgb(255, 255, 255) !;
-} */
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 13px;
+    height: 17px;
+}
