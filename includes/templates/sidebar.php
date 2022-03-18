@@ -1,4 +1,4 @@
-<div class="vh-100 bg-sidebar col-md-3 col-2 col-xxl-2" style="height: 100%">
+<div class="min-vh-100 bg-sidebar col-md-3 col-2 col-xxl-2" style="position: sticky">
   <!-- logo -->
   <img
     src="./asset/svg/logo.svg"
@@ -6,7 +6,7 @@
     class="ms-4 mt-3 d-none d-md-inline"
   />
   <!-- sidebar except logo -->
-  <div class="text-center mt-5">
+  <div class="text-center mt-5" >
     <!-- container for user img, name, role -->
     <div class="d-none d-md-block">
       <img

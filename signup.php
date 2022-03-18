@@ -120,16 +120,16 @@ include './includes/dbh.inc.php';
 if (isset($_POST['sign_up'])){
     $name = $_POST['full_name'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT) ;
     $phone = $_POST['phone'];
 
     $sql_signup = "INSERT INTO students(name, email, phone, join_date, password) VALUES ('$name', '$email', '$phone', NOW(), '$password')";
     $result = mysqli_query($conn, $sql_signup);
     if($result){
-        echo "You have successfully signed up";
         echo "
         <script>
-        window.location.href = './students.php';
+        alert('you have successfully signed up!')
+        window.location.href = './dashboard.php';
         </script>
     ";
     }

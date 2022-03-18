@@ -17,8 +17,10 @@ const isValidPhone = phone => {
 }
 
 form.addEventListener("submit", e => {
-    e.preventDefault();
     validateInputs()
+    if (!isValid){
+        e.preventDefault();
+    }
 });
 
 const validateInputs = () => {
@@ -32,42 +34,55 @@ const validateInputs = () => {
     // checking the full name
     if (fullNameValue === ''){
         setError(fullName, 'please provide your full name');
+        isValid = false;
     } else {
         setSuccess(fullName);
+        isValid = true;
     }
     //checking the email
     if(emailValue === '') {
         setError(email, 'Email is required');
+        isValid = false
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Provide a valid email address');
+        isValid = false
     } else {
         setSuccess(email);
+        isValid = true;
     }
     //checking the phone number
     if(phoneValue === '') {
         setError(phone, 'Phone number is required');
+        isValid = false
     } else if (!isValidPhone(phoneValue)) {
         setError(phone, 'Provide a valid phone number');
+        isValid = false
     } else {
         setSuccess(phone);
+        isValid = true;
     }
 
     if(passwordValue === '') {
         setError(password, 'Password is required');
+        isValid = false
     } else if (passwordValue.length < 8 ) {
         setError(password, 'Password must be at least 8 character.')
+        isValid = false
     } else {
         setSuccess(password);
+        isValid = true;
     }
 
     if(passwordConfirmValue === '') {
         setError(passwordConfirm, 'Please confirm your password');
+        isValid = false
     } else if (passwordConfirmValue !== passwordValue) {
         setError(passwordConfirm, "Passwords doesn't match");
+        isValid = false
     } else {
         setSuccess(passwordConfirm);
+        isValid = true;
     }
-    return true;
 }
 
 function setError(element, message){
@@ -87,9 +102,3 @@ function setSuccess(element){
     inputControl.classList.add('success');
     inputControl.classList.remove('error');
 }
-
-
-const form = document.getElementById("llj")
-
-
-form.addEventListener()

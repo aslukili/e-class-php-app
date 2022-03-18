@@ -20,12 +20,14 @@ include './includes/dbh.inc.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="keywords" content="e-class, e-learning, students"/>
     <meta name="description" content="e-class is the next generation of schools."/>
-
     <title>Students</title>
+    <script src="toast.js"></script>
 </head>
 <body>
 <main>
-
+    <script>
+        new Toast({message: 'Welcome to Toast.js!'});
+    </script>
     <!-- page container -->
     <div class="container-fluid">
         <div class="row flex-nowrap">
@@ -37,6 +39,7 @@ include './includes/dbh.inc.php';
                 <?php include('./includes/templates/header.html'); ?>
                 <!-- main content -->
                 <!-- content head -->
+
                 <div class="row align-items-center text-end py-1">
                     <!-- title -->
                     <div class="col-5 col-md-3 text-start">
@@ -208,6 +211,24 @@ include './includes/dbh.inc.php';
                         </div>
                     </div>
                 </div>
+<!--                modal for delete student-->
+                <div class="modal fade" id="deleteStudentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete Student</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You are going to delete a student! you can't undo this
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <a type="button" class="btn btn-danger" onclick="window.location.href=`./includes/students/delete-student.php?deleteid=${deleteId}`">Delete student</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- table -->
                 <div class="table-responsive">
                     <table class="table table-separate table-borderless">
@@ -242,12 +263,12 @@ include './includes/dbh.inc.php';
                                         <td class="align-middle py-3">$phone</td>
                                         <td class="align-middle py-3">$join_date</td>
                                         <td class="align-middle p-3">
-                                        <a href="./students.php?updateid=$id" class="text-decoration-none">
-                                            <button class="btn btn-bg-less" aria-label="edit" data-bs-toggle="modal" data-bs-target="#updateStudentModal"><i class="bi bi-pencil text-info"></i>
+                                            <button class="btn btn-bg-less" aria-label="edit" data-bs-toggle="modal" data-bs-target="#updateStudentModal" onclick="window.location.href='./students.php?updateid='"><i class="bi bi-pencil text-info"></i>
                                             </button>
-                                        </a>
-                                            <a href="./includes/students/delete-student.php?deleteid=$id" class="btn btn-bg-less" aria-label="delete"><i class="bi bi-trash text-info"></i>
-                                            </a>
+                                            <button class="btn btn-bg-less" data-bs-toggle="modal" data-bs-target="#deleteStudentModal" onclick="setId()">
+                                               <i class="bi bi-trash text-info"></i>
+                                            </button>
+                                           
                                         </td>
                                     </tr>
 ROW;
@@ -262,6 +283,12 @@ ROW;
         </div>
     </div>
 </main>
+<!--<script>-->
+<!--    function setId(){-->
+<!--        let deleteId = --><?php //$id?>
+<!--//    }-->
+<!--//</script>-->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
@@ -275,8 +302,13 @@ if (isset($_POST['save'])){
     $sql_insert = "INSERT INTO students(name, email, phone, join_date) VALUES ('$name', '$email', '$phone', NOW())";
     $result = mysqli_query($conn, $sql_insert);
 
-    if(!$result){
-        echo "Something went wrong";
+    if($result){
+        $_POST['save'] = null;
+        echo "
+        <script>
+        window.location.href = './students.php';
+</script>
+        ";
     }
 }
 ?>
